@@ -1,5 +1,6 @@
 const colorOptions = document.querySelectorAll(".color")
 const gridContainer = document.querySelector(".grid");
+const gridButton = document.querySelector("#create-grid");
 let gridPixels;
 let currentColor = "black";
 
@@ -16,6 +17,18 @@ document.addEventListener("DOMContentLoaded", function() {
 colorOptions.forEach((color) => {
     color.addEventListener("click", changeColor);
 });
+
+gridButton.addEventListener("click", () => {
+    const size = parseInt(prompt("What size should the grid be? Pick a number between 1 and 100:"));
+    if (size) {
+        eraseGrid();
+        createGrid(size);
+        detectPixels()
+        gridPixels.forEach((pixel) => {
+            pixel.addEventListener("mouseenter", paintPixel);
+        });
+    }
+})
 
 function createGrid(size) {
     /* Creates grid of size x size, with a limit of size 100 */
