@@ -9,9 +9,6 @@ document.addEventListener("DOMContentLoaded", function() {
     and adds an event listener to them to call paintPixel() function on hover */
     createGrid(16);
     detectPixels();
-    gridPixels.forEach((pixel) => {
-        pixel.addEventListener("mouseenter", paintPixel);
-    });
 });
 
 colorOptions.forEach((color) => {
@@ -25,9 +22,6 @@ gridButton.addEventListener("click", () => {
         eraseGrid();
         createGrid(size);
         detectPixels()
-        gridPixels.forEach((pixel) => {
-            pixel.addEventListener("mouseenter", paintPixel);
-        });
     }
 })
 
@@ -58,8 +52,12 @@ function eraseGrid() {
 }
 
 function detectPixels() {
-    /* Updates gridPixels to contain all elements of class ".grid-pixel" */
+    /* Updates gridPixels to contain all elements of class ".grid-pixel"
+    and applies event listener to all pixel elements*/
     gridPixels = document.querySelectorAll(".grid-pixel");
+    gridPixels.forEach((pixel) => {
+        pixel.addEventListener("mouseenter", paintPixel);
+    });
 }
 
 function paintPixel(event) {
