@@ -5,6 +5,9 @@ let gridPixels;
 document.addEventListener("DOMContentLoaded", function() {
     createGrid(16);
     detectPixels();
+    gridPixels.forEach((pixel) => {
+        pixel.addEventListener("mouseenter", paintPixel);
+    });
 });
 
 function createGrid(size) {
@@ -29,4 +32,9 @@ function createGrid(size) {
 
 function detectPixels() {
     gridPixels = document.querySelectorAll(".grid-pixel");
+}
+
+function paintPixel(event) {
+    const pixel = event.currentTarget;
+    pixel.classList.add("painted-pixel");
 }
