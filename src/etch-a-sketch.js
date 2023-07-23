@@ -19,6 +19,7 @@ colorOptions.forEach((color) => {
 });
 
 gridButton.addEventListener("click", () => {
+    /* Creates a grid of inputted size when button is presses */
     const size = parseInt(prompt("What size should the grid be? Pick a number between 1 and 100:"));
     if (size >= 1 && size <= 100) {
         eraseGrid();
