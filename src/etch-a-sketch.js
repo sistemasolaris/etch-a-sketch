@@ -20,7 +20,7 @@ colorOptions.forEach((color) => {
 
 gridButton.addEventListener("click", () => {
     const size = parseInt(prompt("What size should the grid be? Pick a number between 1 and 100:"));
-    if (size) {
+    if (size >= 1 && size <= 100) {
         eraseGrid();
         createGrid(size);
         detectPixels()
@@ -32,8 +32,8 @@ gridButton.addEventListener("click", () => {
 
 function createGrid(size) {
     /* Creates grid of size x size, with a limit of size 100 */
-    if (size > 100) {
-        throw new Error("Parameter size exceeds max value of 100");
+    if (size < 1 || size > 100) {
+        throw new Error("Parameter size must be between 1 and 100");
     }
 
     for (let i = 0; i < size; i++) { // For every row
