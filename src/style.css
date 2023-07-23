@@ -1,22 +1,29 @@
 html, body {
     height: 100%;
     margin: 0;
-}
-
-.container {
-    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.grid {
+.container {
     width: 90vmin;
-    height: 90vmin;
+    height: 75vmin;
+    display: flex;
+}
+
+.options-menu {
+    flex-grow: 1;
+    background-color: burlywood;
+}
+
+.grid {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    flex-grow: 5;
+    background-color: gray;
 }
 
 .grid-row {
