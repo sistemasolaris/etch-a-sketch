@@ -31,6 +31,12 @@ function createGrid(size) {
     }
 }
 
+function eraseGrid() {
+    /* Erases all children of gridContainer, clearing the 
+    entire grid and preparing the creation of a new grid */
+    gridContainer.innerHTML = "";
+}
+
 function detectPixels() {
     /* Updates gridPixels to contain all elements of class ".grid-pixel" */
     gridPixels = document.querySelectorAll(".grid-pixel");
