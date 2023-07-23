@@ -1,8 +1,9 @@
 const gridContainer = document.querySelector(".grid");
 let gridPixels;
 
-// Create a 16 x 16 grid on page load
 document.addEventListener("DOMContentLoaded", function() {
+    /* Creates a 16 x 16 grid on page load, detects the pixels of the grid
+    and adds an event listener to them to call paintPixel() function on hover */
     createGrid(16);
     detectPixels();
     gridPixels.forEach((pixel) => {
@@ -31,10 +32,12 @@ function createGrid(size) {
 }
 
 function detectPixels() {
+    /* Updates gridPixels to contain all elements of class ".grid-pixel" */
     gridPixels = document.querySelectorAll(".grid-pixel");
 }
 
 function paintPixel(event) {
+    /* Paints pixel on mouse hover */
     const pixel = event.currentTarget;
     pixel.classList.add("painted-pixel");
 }
