@@ -1,8 +1,10 @@
 const gridContainer = document.querySelector(".grid");
+let gridPixels;
 
 // Create a 16 x 16 grid on page load
 document.addEventListener("DOMContentLoaded", function() {
     createGrid(16);
+    detectPixels();
 });
 
 function createGrid(size) {
@@ -23,4 +25,8 @@ function createGrid(size) {
 
         gridContainer.appendChild(gridRow);
     }
+}
+
+function detectPixels() {
+    gridPixels = document.querySelectorAll(".grid-pixel");
 }
