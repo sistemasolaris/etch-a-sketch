@@ -12,11 +12,27 @@ html, body {
     display: flex;
 }
 
+/* Options Menu CSS */
 .options-menu {
-    flex-grow: 1;
+    flex: 1;
     background-color: burlywood;
 }
 
+#colors {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 5%;
+}
+
+.color {
+    width: 40%;
+    height: 0;
+    padding-bottom: 40%;
+    margin: 5%;
+    background-color: red;
+}
+
+/* Canvas Grid CSS */
 .grid {
     display: flex;
     flex-direction: column;
