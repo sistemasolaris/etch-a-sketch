@@ -29,8 +29,25 @@ html, body {
     height: 0;
     padding-bottom: 40%;
     margin: 5%;
-    background-color: red;
+    outline: 2px solid black;
 }
+
+#black {background-color: black;}
+#gray {background-color: gray;}
+#maroon {background-color: maroon;}
+#red {background-color: red;}
+#green {background-color: green;}
+#lime {background-color: lime;}
+#olive {background-color: olive;}
+#yellow {background-color: yellow;}
+#purple {background-color: purple;}
+#fuchsia {background-color: fuchsia;}
+#navy {background-color: navy;}
+#blue {background-color: blue;}
+#teal {background-color: teal;}
+#aqua {background-color: aqua;}
+#silver {background-color: silver;}
+#white {background-color: white;}
 
 /* Canvas Grid CSS */
 .grid {
