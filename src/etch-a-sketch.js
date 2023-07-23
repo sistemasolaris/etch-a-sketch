@@ -1,3 +1,4 @@
+const colorOptions = document.querySelectorAll(".color")
 const gridContainer = document.querySelector(".grid");
 let gridPixels;
 let currentColor = "black";
@@ -10,6 +11,10 @@ document.addEventListener("DOMContentLoaded", function() {
     gridPixels.forEach((pixel) => {
         pixel.addEventListener("mouseenter", paintPixel);
     });
+});
+
+colorOptions.forEach((color) => {
+    color.addEventListener("click", changeColor);
 });
 
 function createGrid(size) {
@@ -47,4 +52,9 @@ function paintPixel(event) {
     /* Paints pixel on mouse hover */
     const pixel = event.currentTarget;
     pixel.style.setProperty("background-color", currentColor);
+}
+
+function changeColor(event) {
+    /* Changes currentColor to selected color */
+    currentColor = event.currentTarget.getAttribute("id");
 }
