@@ -1,5 +1,6 @@
 const gridContainer = document.querySelector(".grid");
 let gridPixels;
+let currentColor = "black";
 
 document.addEventListener("DOMContentLoaded", function() {
     /* Creates a 16 x 16 grid on page load, detects the pixels of the grid
@@ -45,5 +46,5 @@ function detectPixels() {
 function paintPixel(event) {
     /* Paints pixel on mouse hover */
     const pixel = event.currentTarget;
-    pixel.classList.add("painted-pixel");
+    pixel.style.setProperty("background-color", currentColor);
 }

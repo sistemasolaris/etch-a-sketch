@@ -69,7 +69,3 @@ html, body {
 .grid-pixel {
     flex: 1;
 }
-
-.painted-pixel {
-    background-color: blue;
-}
